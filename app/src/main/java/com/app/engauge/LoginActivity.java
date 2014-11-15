@@ -14,7 +14,7 @@ import android.os.Build;
 import com.firebase.client.Firebase;
 
 
-public class MyActivity extends Activity {
+public class LoginActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
