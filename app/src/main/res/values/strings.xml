@@ -5,4 +5,25 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Login Activity -->
+    <string name="login_activity_label">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="or_spaces"> or </string>
+    <string name="sign_up">Sign Up</string>
+
+    <!-- Signup Activity -->
+    <string name="signup_activity_label">Sign Up</string>
+
+    <!-- Homepage Activity -->
+    <string name="homepage_activity_label">Homepage</string>
+
+    <!-- View Group Activity -->
+    <string name="view_group_activity_label"></string>
+
+    <!-- Add Question Activity -->
+    <string name="add_question_activity_label"></string>
+
+
 </resources>

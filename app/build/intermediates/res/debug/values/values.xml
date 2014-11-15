@@ -10,8 +10,18 @@
     <eat-comment />
 
     <string name="action_settings">Settings</string>
+    <string name="add_question_activity_label"></string>
     <string name="app_name">Engauge</string>
     <string name="hello_world">Hello world!</string>
+    <string name="homepage_activity_label">Homepage</string>
+    <string name="login">Login</string>
+    <string name="login_activity_label">Login</string>
+    <string name="or_spaces"> or </string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="signup_activity_label">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="view_group_activity_label"></string>
     <!-- From: file:/Users/Maury/Projects/Engauge/app/src/main/res/values/styles.xml -->
     <eat-comment />
 

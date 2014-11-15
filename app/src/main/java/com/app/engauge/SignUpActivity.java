@@ -5,5 +5,5 @@ import android.app.Activity;
 /**
  * Created by Maury on 11/14/14.
  */
-public class ViewGroupActivity extends Activity {
+public class SignUpActivity extends Activity {
 }
