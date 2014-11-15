@@ -27,5 +27,8 @@
     <!-- Add Question Activity -->
     <string name="add_question_activity_label"></string>
 
+    <!-- Menus -->
+    <string name="action_add_group">Add Group</string>
+
 
 </resources>
