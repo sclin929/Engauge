@@ -26,6 +26,22 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // Set a listener for when a user's state changes.
+        Firebase ref = new Firebase(FirebaseApp.FIREBASE_URL);
+        ref.addAuthStateListener(new Firebase.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(AuthData authData) {
+                if (authData != null) {
+                    // user is logged in
+                    Intent intent = new Intent(
+                            LoginActivity.this,
+                            HomepageActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
     }
 
     @Override

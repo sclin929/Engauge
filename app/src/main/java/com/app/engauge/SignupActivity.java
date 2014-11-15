@@ -13,8 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class SignupActivity extends Activity {
@@ -47,17 +51,23 @@ public class SignupActivity extends Activity {
 
             public void onClick(View arg0) {
                 // Retrieve the text entered from the EditText
-                String name = firstNameView.getText().toString() + ' '
+                final String name = firstNameView.getText().toString() + ' '
                         + lastNameView.getText().toString();
                 String email = emailView.getText().toString().toLowerCase();
                 String password = passwordView.getText().toString();
 
                 // Validate fields before creating the new user.
                 if (emailValidation() && reenterPasswordViewValidation()) {
-                    Firebase ref = new Firebase(FirebaseApp.FIREBASE_URL);
+                    final Firebase ref = new Firebase(FirebaseApp.FIREBASE_URL);
                     ref.createUser(email, password, new Firebase.ResultHandler() {
                         @Override
                         public void onSuccess() {
+                            Firebase newUserRef = ref.push();
+                            AuthData userAuth = newUserRef.getAuth();
+
+                            Map<String, String> user = new HashMap<String, String>();
+                            user.put("Display name", name);
+                            ref.child("users").child(userAuth.getUid()).setValue(user);
                             Toast.makeText(getApplicationContext(),
                                     "Successfully signed up. Please login.",
                                     Toast.LENGTH_LONG)
