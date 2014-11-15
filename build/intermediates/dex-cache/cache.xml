@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.0.1-b75847219f44616526c9717cbc494497c88a91dd.jar"
+        jar="/Users/jiexicao/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.0.1/331e3a0a95687addb3d977b01d50d4e7242b9ca8/firebase-client-android-2.0.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="331e3a0a95687addb3d977b01d50d4e7242b9ca8"/>
+    <item
+        dex="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.0.1-114f89c0abb73cbd5554950cde551c14e69e201f.jar"
+        jar="/Users/jiexicao/AndroidStudioProjects/Engauge/app/libs/firebase-client-android-2.0.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9c55efd3121235b0fb3981666306448dd3e44fc8"/>
+    <item
+        dex="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-0735f83b28c6214a9562e49d7a613b6671d5d384.jar"
+        jar="/Users/jiexicao/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6"/>
+    <item
+        dex="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.0.1-9585ee18daf17ac1dc795b9fb48738360e141410.jar"
+        jar="/Users/jiexicao/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.0.1/bd6936fbb77b20b7a4deec0126a41cfbbc1a3a3a/firebase-client-jvm-2.0.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="bd6936fbb77b20b7a4deec0126a41cfbbc1a3a3a"/>
+    <item
+        dex="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-52ca806cfc5b22c3d757a998f858882fc52bee7f.jar"
+        jar="/Users/jiexicao/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b"/>
+    <item
+        dex="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/intermediates/pre-dexed/debug/tubesock-0.0.10-b505942ee9eff06455e47447d0b859c34b5121a6.jar"
+        jar="/Users/jiexicao/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.10/ddce2c65136c1de8000f8932d8b7ab16d5d336b9/tubesock-0.0.10.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="ddce2c65136c1de8000f8932d8b7ab16d5d336b9"/>
+    <item
+        dex="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-63129e19e02c3ffe7794f9de715170bd6c3d81cf.jar"
+        jar="/Users/jiexicao/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113"/>
+
+</pre-dex-items>
