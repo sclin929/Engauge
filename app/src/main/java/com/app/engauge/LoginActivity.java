@@ -4,12 +4,16 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.firebase.client.AuthData;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -21,9 +25,23 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_login);
+
+        // Set a listener for when a user's state changes.
+        Firebase ref = new Firebase(FirebaseApp.FIREBASE_URL);
+        ref.addAuthStateListener(new Firebase.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(AuthData authData) {
+                if (authData != null) {
+                    // user is logged in
+                    Intent intent = new Intent(
+                            LoginActivity.this,
+                            HomepageActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
     }
 
     @Override
@@ -46,12 +64,52 @@ public class LoginActivity extends Activity {
     }
 
     public void onClickLogin(View view) {
+        // Extract username and password.
+        EditText usernameView = (EditText) findViewById(R.id.login_username);
+        EditText passwordView = (EditText) findViewById(R.id.login_password);
+        String username = usernameView.getText().toString();
+        String password = passwordView.getText().toString();
+
+        Log.i("Logging in user: ", username);
+
+        // Authenticate user with Firebase.
+        Firebase ref = new Firebase(FirebaseApp.FIREBASE_URL);
+        ref.authWithPassword(username, password, new Firebase.AuthResultHandler() {
+            @Override
+            public void onAuthenticated(AuthData authData) {
+                // If user exists and is authenticated, send user to the home page.
+                Intent intent = new Intent(
+                        LoginActivity.this,
+                        HomepageActivity.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(),
+                        "Successfully logged in.",
+                        Toast.LENGTH_LONG).show();
+                finish();
+            }
+
+            @Override
+            public void onAuthenticationError(FirebaseError firebaseError) {
+                // there was an error
+                if (firebaseError.getCode() == FirebaseError.INVALID_AUTH_ARGUMENTS) {
+                    Toast.makeText(getApplicationContext(),
+                            "Invalid email/password combination.",
+                            Toast.LENGTH_LONG)
+                            .show();
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "Login failed. Please try again.",
+                            Toast.LENGTH_LONG)
+                            .show();
+                }
+            }
+        });
         Intent loginIntent = new Intent(LoginActivity.this, HomepageActivity.class);
         startActivity(loginIntent);
     }
 
     public void onClickSignUp(View view) {
-        Intent signUpIntent = new Intent(LoginActivity.this, SignUpActivity.class);
+        Intent signUpIntent = new Intent(LoginActivity.this, SignupActivity.class);
         startActivity(signUpIntent);
     }
 }

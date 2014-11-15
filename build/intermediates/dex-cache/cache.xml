@@ -2,22 +2,28 @@
 <pre-dex-items>
 
     <item
-        dex="/Users/Maury/Projects/Engauge/app/build/intermediates/pre-dexed/debug/classes-0e45d9ff9e2443d5971674541e7e1fe291508652.jar"
-        jar="/Users/Maury/Projects/Engauge/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        dex="/Users/maiho/Documents/Projects/Engauge/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-ebe40170ef44a35d24bed31e2344c083b218a3bc.jar"
+        jar="/Users/maiho/Documents/Projects/Engauge/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/Users/maiho/Documents/Projects/Engauge/app/build/intermediates/pre-dexed/debug/classes-470968e893adcd29b54f5411c9567de102207f2d.jar"
+        jar="/Users/maiho/Documents/Projects/Engauge/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
     <item
-        dex="/Users/Maury/Projects/Engauge/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-bca9cd8c8082330ef7549e0398af852faae531fd.jar"
-        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        dex="/Users/maiho/Documents/Projects/Engauge/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-e16323679c6884abb9ce6abc7c261870a069dd93.jar"
+        jar="/Users/maiho/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
     <item
-        dex="/Users/Maury/Projects/Engauge/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-56602901dd1dfe463ca077da1ebef0d96c80d5b2.jar"
-        jar="/Users/Maury/Projects/Engauge/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        dex="/Users/maiho/Documents/Projects/Engauge/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.0.1-74ad893fd40000fa5fb51471d4c1ceef8fdb1a30.jar"
+        jar="/Users/maiho/Documents/Projects/Engauge/app/libs/firebase-client-android-2.0.1.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+        sha1="9c55efd3121235b0fb3981666306448dd3e44fc8"/>
 
 </pre-dex-items>

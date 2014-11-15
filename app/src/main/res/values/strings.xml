@@ -34,6 +34,14 @@
 
     <!-- Menus -->
     <string name="action_add_group">Add Group</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="first_name_input_hint">First name.</string>
+    <string name="last_name_input_hint">Last name.</string>
+    <string name="email_input_hint">Email.</string>
+    <string name="password_input_hint">Password</string>
+    <string name="reenter_password_input_hint">Reenter password</string>
+    <string name="sign_up_button_label">Sign up</string>
+    <string name="log_out">Log out</string>
     <string name="action_save_group">Save Group</string>
 
     <!-- Toasts -->

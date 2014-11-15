@@ -5,4 +5,8 @@
         android:icon="@drawable/ic_action_new"
         android:title="@string/action_add_group"
         android:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/action_logout"
+        android:title="@string/log_out"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
 </menu>
