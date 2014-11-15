@@ -3,6 +3,8 @@ package com.app.data;
 import com.app.engauge.FirebaseApp;
 import com.firebase.client.Firebase;
 
+import java.util.HashMap;
+
 /**
  * Created by jiexicao on 11/14/14.
  *
@@ -25,13 +27,17 @@ public class Group {
     private String name;
     private String description;
     private String ownerId;
-    private String questions;
+    private HashMap<String, Question> questions;
+
+    public Group() {
+        // Default constructor needed to convert Firebase results to Group.
+    }
 
     public Group(String name, String description, String ownerId) {
         this.name = name;
         this.description = description;
         this.ownerId = ownerId;
-        this.questions = "";
+        this.questions = null;
     }
 
     public String createGroupId() {
@@ -55,7 +61,7 @@ public class Group {
         this.ownerId = ownerId;
     }
 
-    public void setQuestions(String questions) {
+    public void setQuestions(HashMap<String, Question> questions) {
         this.questions = questions;
     }
 
@@ -71,7 +77,7 @@ public class Group {
         return this.ownerId;
     }
 
-    public String getQuestions() {
+    public HashMap<String, Question> getQuestions() {
         return this.questions;
     }
 

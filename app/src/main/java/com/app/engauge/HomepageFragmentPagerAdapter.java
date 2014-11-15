@@ -17,10 +17,10 @@ public class HomepageFragmentPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (i) {
             case 0:
-                fragment = new HomepageFavoritesFragment();
+                fragment = new HomepageRecentFragment();
                 break;
             case 1:
-                fragment = new HomepageRecentFragment();
+                fragment = new HomepageFavoritesFragment();
                 break;
         }
         return fragment;

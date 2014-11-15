@@ -60,15 +60,15 @@ public class HomepageActivity extends FragmentActivity {
 
         Resources resources = getResources();
 
-        ActionBar.Tab favoritesTab = bar.newTab();
-        favoritesTab.setText(resources.getString(R.string.favorites));
-        favoritesTab.setTabListener(tabListener);
-        bar.addTab(favoritesTab);
-
         ActionBar.Tab recentTab = bar.newTab();
         recentTab.setText(resources.getString(R.string.recent));
         recentTab.setTabListener(tabListener);
         bar.addTab(recentTab);
+
+        ActionBar.Tab favoritesTab = bar.newTab();
+        favoritesTab.setText(resources.getString(R.string.favorites));
+        favoritesTab.setTabListener(tabListener);
+        bar.addTab(favoritesTab);
     }
 
     @Override
