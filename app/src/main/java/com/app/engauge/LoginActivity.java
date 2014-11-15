@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,13 +49,15 @@ public class LoginActivity extends Activity {
 
     public void onClickLogin(View view) {
         // Extract username and password.
-        EditText usernameView = (EditText) view.findViewById(R.id.login_username);
-        EditText passwordView = (EditText) view.findViewById(R.id.login_password);
+        EditText usernameView = (EditText) findViewById(R.id.login_username);
+        EditText passwordView = (EditText) findViewById(R.id.login_password);
         String username = usernameView.getText().toString();
         String password = passwordView.getText().toString();
 
+        Log.i("Logging in user: ", username);
+
         // Authenticate user with Firebase.
-        Firebase ref = new Firebase("https://engauge.firebaseio.com");
+        Firebase ref = new Firebase(FirebaseApp.FIREBASE_URL);
         ref.authWithPassword(username, password, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
@@ -85,12 +88,12 @@ public class LoginActivity extends Activity {
                 }
             }
         });
-        Intent loginIntent = new Intent(LoginActivity.this, LoginActivity.class);
+        Intent loginIntent = new Intent(LoginActivity.this, HomepageActivity.class);
         startActivity(loginIntent);
     }
 
     public void onClickSignUp(View view) {
-        Intent signUpIntent = new Intent(LoginActivity.this, SignUpActivity.class);
+        Intent signUpIntent = new Intent(LoginActivity.this, SignupActivity.class);
         startActivity(signUpIntent);
     }
 }

@@ -26,10 +26,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.engauge.SignUpActivity"
-            android:label="@string/signup_activity_label" >
-        </activity>
-        <activity
             android:name="com.app.engauge.HomepageActivity"
             android:label="@string/homepage_activity_label" >
         </activity>
@@ -40,6 +36,10 @@
         <activity
             android:name="com.app.engauge.AddQuestionActivity"
             android:label="@string/add_question_activity_label" >
+        </activity>
+        <activity
+            android:name="com.app.engauge.SignupActivity"
+            android:label="@string/title_activity_signup" >
         </activity>
     </application>
 
