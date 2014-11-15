@@ -9,7 +9,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.firebase.client.AuthData;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -21,8 +24,6 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_login);
     }
 
@@ -46,7 +47,45 @@ public class LoginActivity extends Activity {
     }
 
     public void onClickLogin(View view) {
-        Intent loginIntent = new Intent(LoginActivity.this, HomepageActivity.class);
+        // Extract username and password.
+        EditText usernameView = (EditText) view.findViewById(R.id.login_username);
+        EditText passwordView = (EditText) view.findViewById(R.id.login_password);
+        String username = usernameView.getText().toString();
+        String password = passwordView.getText().toString();
+
+        // Authenticate user with Firebase.
+        Firebase ref = new Firebase("https://engauge.firebaseio.com");
+        ref.authWithPassword(username, password, new Firebase.AuthResultHandler() {
+            @Override
+            public void onAuthenticated(AuthData authData) {
+                // If user exists and is authenticated, send user to the home page.
+                Intent intent = new Intent(
+                        LoginActivity.this,
+                        HomepageActivity.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(),
+                        "Successfully logged in.",
+                        Toast.LENGTH_LONG).show();
+                finish();
+            }
+
+            @Override
+            public void onAuthenticationError(FirebaseError firebaseError) {
+                // there was an error
+                if (firebaseError.getCode() == FirebaseError.INVALID_AUTH_ARGUMENTS) {
+                    Toast.makeText(getApplicationContext(),
+                            "Invalid email/password combination.",
+                            Toast.LENGTH_LONG)
+                            .show();
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "Login failed. Please try again.",
+                            Toast.LENGTH_LONG)
+                            .show();
+                }
+            }
+        });
+        Intent loginIntent = new Intent(LoginActivity.this, LoginActivity.class);
         startActivity(loginIntent);
     }
 
