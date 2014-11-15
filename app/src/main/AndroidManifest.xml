@@ -28,6 +28,10 @@
             android:label="@string/homepage_activity_label" >
         </activity>
         <activity
+            android:name=".CreateGroupActivity"
+            android:label="@string/create_group_activity_label" >
+        </activity>
+        <activity
             android:name=".ViewGroupActivity"
             android:label="@string/view_group_activity_label" >
         </activity>

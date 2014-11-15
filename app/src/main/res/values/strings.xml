@@ -21,6 +21,11 @@
     <string name="favorites">Favorites</string>
     <string name="recent">Recent</string>
 
+    <!-- Create Group Activity -->
+    <string name="create_group_activity_label">Create Group</string>
+    <string name="group_name">Group Name</string>
+    <string name="group_short_description">Short Description</string>
+
     <!-- View Group Activity -->
     <string name="view_group_activity_label"></string>
 
@@ -29,6 +34,5 @@
 
     <!-- Menus -->
     <string name="action_add_group">Add Group</string>
-
-
+    <string name="action_save_group">Save Group</string>
 </resources>

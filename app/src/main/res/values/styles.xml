@@ -5,4 +5,7 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="LayoutPadding" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_margin">16dp</item>
+    </style>
 </resources>

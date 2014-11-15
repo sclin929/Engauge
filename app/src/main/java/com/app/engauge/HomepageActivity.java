@@ -2,6 +2,7 @@ package com.app.engauge;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -82,7 +83,9 @@ public class HomepageActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
-            case R.id.action_search:
+            case R.id.action_add_group:
+                Intent createGroup = new Intent(HomepageActivity.this, CreateGroupActivity.class);
+                startActivity(createGroup);
                 return true;
             case R.id.action_settings:
                 return true;
