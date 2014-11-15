@@ -30,6 +30,3 @@ app/build
 
 # Config
 config.xml
-
-# Local Android Studio properties
-local.properties
