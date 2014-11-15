@@ -35,4 +35,8 @@
     <!-- Menus -->
     <string name="action_add_group">Add Group</string>
     <string name="action_save_group">Save Group</string>
+
+    <!-- Toasts -->
+    <string name="toast_successful_create_group">You\'ve successfully created a group!</string>
+    <string name="toast_unsuccessful_create_group">We had a problem saving your group...</string>
 </resources>

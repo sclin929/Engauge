@@ -43,12 +43,45 @@ public class Group {
         return "";
     }
 
-    public String saveToFirebase() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public void setQuestions(String questions) {
+        this.questions = questions;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    public String getQuestions() {
+        return this.questions;
+    }
+
+
+    public String saveToFirebase(Firebase.CompletionListener listener) {
         Firebase firebaseRef = new Firebase(FirebaseApp.FIREBASE_URL);
         Firebase groupsRef = firebaseRef.child("groups");
         Firebase newGroupRef = groupsRef.push();
 
-        newGroupRef.setValue(this);
+        newGroupRef.setValue(this, listener);
         return newGroupRef.getKey();
     }
 }
