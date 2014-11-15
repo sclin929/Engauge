@@ -46,7 +46,7 @@ public class LoginActivity extends Activity {
     }
 
     public void onClickLogin(View view) {
-        Intent loginIntent = new Intent(LoginActivity.this, LoginActivity.class);
+        Intent loginIntent = new Intent(LoginActivity.this, HomepageActivity.class);
         startActivity(loginIntent);
     }
 

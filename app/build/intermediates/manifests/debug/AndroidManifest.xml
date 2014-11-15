@@ -4,11 +4,11 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="20" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="com.app.engauge.FirebaseApp"

@@ -18,6 +18,8 @@
 
     <!-- Homepage Activity -->
     <string name="homepage_activity_label">Homepage</string>
+    <string name="favorites">Favorites</string>
+    <string name="recent">Recent</string>
 
     <!-- View Group Activity -->
     <string name="view_group_activity_label"></string>
