@@ -2,9 +2,9 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/Users/jiexicao/AndroidStudioProjects/Engauge/app/src/androidTest/res" />
-        <source path="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/generated/res/rs/test/debug" />
-        <source path="/Users/jiexicao/AndroidStudioProjects/Engauge/app/build/generated/res/generated/test/debug" />
+        <source path="/Users/maiho/Documents/Projects/Engauge/app/src/androidTest/res" />
+        <source path="/Users/maiho/Documents/Projects/Engauge/app/build/generated/res/rs/test/debug" />
+        <source path="/Users/maiho/Documents/Projects/Engauge/app/build/generated/res/generated/test/debug" />
     </dataSet>
 
 </merger>

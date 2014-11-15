@@ -2,7 +2,7 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/Users/jiexicao/AndroidStudioProjects/Engauge/app/src/androidTest/assets" />
+        <source path="/Users/maiho/Documents/Projects/Engauge/app/src/androidTest/assets" />
     </dataSet>
 
 </merger>
