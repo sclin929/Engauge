@@ -21,6 +21,11 @@
     <string name="favorites">Favorites</string>
     <string name="recent">Recent</string>
 
+    <!-- Create Group Activity -->
+    <string name="create_group_activity_label">Create Group</string>
+    <string name="group_name">Group Name</string>
+    <string name="group_short_description">Short Description</string>
+
     <!-- View Group Activity -->
     <string name="view_group_activity_label"></string>
 
@@ -37,5 +42,9 @@
     <string name="reenter_password_input_hint">Reenter password</string>
     <string name="sign_up_button_label">Sign up</string>
     <string name="log_out">Log out</string>
+    <string name="action_save_group">Save Group</string>
 
+    <!-- Toasts -->
+    <string name="toast_successful_create_group">You\'ve successfully created a group!</string>
+    <string name="toast_unsuccessful_create_group">We had a problem saving your group...</string>
 </resources>

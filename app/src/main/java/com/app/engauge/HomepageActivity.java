@@ -2,6 +2,7 @@ package com.app.engauge;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -59,15 +60,15 @@ public class HomepageActivity extends FragmentActivity {
 
         Resources resources = getResources();
 
-        ActionBar.Tab favoritesTab = bar.newTab();
-        favoritesTab.setText(resources.getString(R.string.favorites));
-        favoritesTab.setTabListener(tabListener);
-        bar.addTab(favoritesTab);
-
         ActionBar.Tab recentTab = bar.newTab();
         recentTab.setText(resources.getString(R.string.recent));
         recentTab.setTabListener(tabListener);
         bar.addTab(recentTab);
+
+        ActionBar.Tab favoritesTab = bar.newTab();
+        favoritesTab.setText(resources.getString(R.string.favorites));
+        favoritesTab.setTabListener(tabListener);
+        bar.addTab(favoritesTab);
     }
 
     @Override
@@ -82,7 +83,9 @@ public class HomepageActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
-            case R.id.action_search:
+            case R.id.action_add_group:
+                Intent createGroup = new Intent(HomepageActivity.this, CreateGroupActivity.class);
+                startActivity(createGroup);
                 return true;
             case R.id.action_settings:
                 return true;

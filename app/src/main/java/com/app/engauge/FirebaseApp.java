@@ -2,23 +2,21 @@ package com.app.engauge;
 
 import android.app.Application;
 
-import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
 
 /**
  * Created by jiexicao on 11/14/14.
  */
 public class FirebaseApp extends Application {
     public static String FIREBASE_URL = "https://engauge.firebaseio.com/";
+    public static Firebase FIREBASE_REF;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         Firebase.setAndroidContext(this);
-        Firebase myFirebaseRef = new Firebase(FIREBASE_URL);
+        FIREBASE_REF = new Firebase(FIREBASE_URL);
 
         /*
         // Example:
