@@ -17,13 +17,29 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.app.engauge.MyActivity"
-            android:label="@string/app_name" >
+            android:name="com.app.engauge.LoginActivity"
+            android:label="@string/login_activity_label" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.engauge.SignUpActivity"
+            android:label="@string/signup_activity_label" >
+        </activity>
+        <activity
+            android:name="com.app.engauge.HomepageActivity"
+            android:label="@string/homepage_activity_label" >
+        </activity>
+        <activity
+            android:name="com.app.engauge.ViewGroupActivity"
+            android:label="@string/view_group_activity_label" >
+        </activity>
+        <activity
+            android:name="com.app.engauge.AddQuestionActivity"
+            android:label="@string/add_question_activity_label" >
         </activity>
     </application>
 

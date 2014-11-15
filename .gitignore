@@ -25,7 +25,11 @@ local.properties
 .idea/tasks.xml
 .idea/libraries/*
 .gradle
+app/build
 /build
 
 # Config
 config.xml
+
+# Local Android Studio properties
+local.properties
