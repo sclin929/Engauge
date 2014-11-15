@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
+import com.firebase.client.Firebase;
 
 
 public class MyActivity extends Activity {
@@ -18,6 +19,11 @@ public class MyActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Firebase.setAndroidContext(this);
+        Firebase myFirebaseRef = new Firebase("https://engauge.firebaseio.com/");
+        myFirebaseRef.child("message").setValue("Do you have data? You'll love Firebase.");
+
         setContentView(R.layout.activity_my);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
